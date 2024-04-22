@@ -1,4 +1,4 @@
-# Task card Servive
+# Task card Service
 
 This is a simple Spring boot application focused on the interaction with a Spring REST server.
 
