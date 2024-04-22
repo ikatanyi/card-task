@@ -28,7 +28,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 /**
  *
- * @author Kelsas
+ * @author kennedy ikatanyi
  */
 @Order(Ordered.HIGHEST_PRECEDENCE)
 @ControllerAdvice

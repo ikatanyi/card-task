@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 /**
  *
- * @author Kelsas
+ * @author kennedy ikatanyi
  */  
 public class Pager<T> {
 

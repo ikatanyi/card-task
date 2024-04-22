@@ -7,7 +7,7 @@ import org.springframework.data.domain.Page;
 
 /**
  *
- * @author Kelsas
+ * @author kennedy ikatanyi
  */
 @Data
 public class ContentPage<T> {

@@ -39,12 +39,10 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.csrf(AbstractHttpConfigurer::disable)
-            .authorizeHttpRequests(auth -> auth.requestMatchers( "/api/auth/generate-token").permitAll())
             .authorizeHttpRequests(auth -> auth.requestMatchers(Public_Matchers).permitAll())
-            .authorizeHttpRequests(auth -> auth.requestMatchers("/api/auth/users/**").permitAll())
-            .authorizeHttpRequests(auth -> auth.requestMatchers("/api/**").authenticated())
+            .authorizeHttpRequests(auth -> auth.requestMatchers("/api/auth/sign-in").permitAll())
             .authorizeHttpRequests(auth -> auth.requestMatchers("/api/card/**").authenticated())
-            .authorizeHttpRequests(auth -> auth.requestMatchers("/auth/admin/**").authenticated())
+            .authorizeHttpRequests(auth -> auth.requestMatchers("/api/auth/users").authenticated())
             .sessionManagement(sess -> sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .authenticationProvider(authenticationProvider())
             .addFilterBefore(authFilter, UsernamePasswordAuthenticationFilter.class)

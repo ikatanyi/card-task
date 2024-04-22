@@ -22,6 +22,7 @@ import lombok.Data;
 @Data
 public class CardResponseDto {
 
+    private Long id;
     private String name;
     private String description;
     private String color;
