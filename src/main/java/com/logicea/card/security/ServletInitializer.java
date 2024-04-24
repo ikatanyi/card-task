@@ -1,5 +1,6 @@
-package com.logicea.card;
+package com.logicea.card.security;
 
+import com.logicea.card.CardApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
