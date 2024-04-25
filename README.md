@@ -26,12 +26,12 @@ Server implementation features the following:
 
 Available users are:
 
-|User email|Password| Role  |
-|----------|--------|-------|
-|admin@admin.com|pwd| Admin |
-|userman@userman.com|pwd| Admin |
-|user1@user1.com|pwd| User  |
-|user2@user2.com|pwd| User  |
+|User email|Password| Role   |
+|----------|--------|--------|
+|admin@admin.com|pwd| ADMIN  |
+|userman@userman.com|pwd| ADMIN  |
+|user1@user1.com|pwd| MEMBER |
+|user2@user2.com|pwd| MEMBER |
 |...|
 
 
