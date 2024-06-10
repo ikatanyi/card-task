@@ -1,4 +1,4 @@
-package com.logicea.card.security.config;
+package com.logicea.card.security.securityOAuthConfig;
 
 import com.logicea.card.model.entity.UserEntity;
 import java.util.Optional;

@@ -1,6 +1,7 @@
 spring:
   application:
     name: task-card-service
+
   datasource:
     url: jdbc:mysql://localhost:3306/card-task-db
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -11,7 +12,6 @@ spring:
   sql:
     init:
       mode: always
-
   jpa:
     hibernate:
       ddl-auto: update
@@ -22,6 +22,13 @@ spring:
         format_sql: true
     database: mysql
     database-platform: org.hibernate.dialect.MySQLDialect
+
+access-token:
+  private: classpath:certs/access-token-private.key
+  public: classpath:certs/access-token-public.key
+refresh-token:
+  private: classpath:certs/refresh-token-private.key
+  public: classpath:certs/refresh-token-public.key
 
 server:
   port: 8080

@@ -25,6 +25,7 @@ public class RoleEntity  {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, unique = true)
     private Long id;
+    @Column(unique=true)
     private String name;
     private String description;
     @Column(name = "is_disabled", columnDefinition = "boolean default false", nullable = false)
