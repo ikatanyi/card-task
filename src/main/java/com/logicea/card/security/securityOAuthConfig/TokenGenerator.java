@@ -35,7 +35,7 @@ public class TokenGenerator {
         .issuer("TaskCardApp")
         .issuedAt(now)
         .expiresAt(now.plus(10, ChronoUnit.MINUTES))
-        .subject(String.valueOf(user.getId()))
+        .subject(user.getEmail())
         .build();
 
     return accessTokenEncoder.encode(JwtEncoderParameters.from(claimsSet)).getTokenValue();
@@ -49,7 +49,7 @@ public class TokenGenerator {
         .issuer("TaskCardApp")
         .issuedAt(now)
         .expiresAt(now.plus(30, ChronoUnit.DAYS))
-        .subject(String.valueOf(user.getId()))
+        .subject(user.getEmail())
         .build();
 
     return refreshTokenEncoder.encode(JwtEncoderParameters.from(claimsSet)).getTokenValue();
