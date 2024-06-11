@@ -32,7 +32,7 @@ public class CardEntity implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, unique = true)
     private Long id;
-    @Column(name = "name",nullable = false)
+    @Column(name = "name", unique=true, nullable = false)
     private String name;
     @Column(name = "description",nullable = true)
     private String description;

@@ -1,6 +1,7 @@
 package com.logicea.card.security.securityOAuthConfig;
 
 
+import com.logicea.card.exception.CustomAccessDeniedHandler;
 import com.nimbusds.jose.jwk.JWK;
 import com.nimbusds.jose.jwk.JWKSet;
 import com.nimbusds.jose.jwk.RSAKey;
@@ -62,7 +63,7 @@ public class WebSecurity {
         .sessionManagement((session) -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
         .exceptionHandling((exceptions) -> exceptions
             .authenticationEntryPoint(new BearerTokenAuthenticationEntryPoint())
-            .accessDeniedHandler(new BearerTokenAccessDeniedHandler())
+            .accessDeniedHandler(new CustomAccessDeniedHandler())
         );
     return http.build();
   }

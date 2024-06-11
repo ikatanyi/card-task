@@ -42,6 +42,7 @@ public class CardSpecification {
             }
 
             //Sort by name,color, status
+            // You can sort by one value at time, but we can change the value to take a list to sort by all the attributes
             if(sortBy!=null) {
                 query.orderBy(cb.asc(root.get(sortBy.value)));
             }
