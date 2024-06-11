@@ -58,7 +58,7 @@ public class CardServiceImpl implements CardService {
     public Page<CardResponseDto> retrieveAllCards(String name, String color, CardStatusEnum status, LocalDate createdOn, SortEnum sortBy, Pageable page) {
         var user = userService.getAuthenticatedUser();
 
-        if(!user.getRoles().contains("MEMBER"))
+        if(!user.getRoles().contains("ADMIN"))
              user = null;
 
         Specification<CardEntity> spec = CardSpecification.createSpecification(name, color, status, createdOn, sortBy, user);
